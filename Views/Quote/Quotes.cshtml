@@ -1,0 +1,15 @@
+@model List<Dictionary<string, object>>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      @{
+        foreach(var quote in Model)
+        {
+          <p class="text-primary">"@quote["quote"]"</p>
+          <p class="text-primary">@quote["author"] @quote["created_at"]</p>
+          <hr>
+        }
+      }
+    </div>
+  </div>
+</div>
